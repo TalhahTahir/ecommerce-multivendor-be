@@ -6,14 +6,15 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const cors = require("cors");
 
-app.use(cors({
+const corsOptions = {
   origin: [
     "https://ecommerce-multivendor-fe-vydh.vercel.app"
   ],
   methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   credentials: true
-}));
-app.options("*", cors());
+};
+app.use(cors(corsOptions));
+app.options("*", cors(corsOptions));
 
 app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
