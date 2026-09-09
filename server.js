@@ -11,10 +11,6 @@ process.on("uncaughtException", (err) => {
   console.log(`shutting down the server for handling uncaught exception`);
 });
 
-app.use("/", (req, res) => {
-  res.send("Server is running");
-});
-
 // config
 if (process.env.NODE_ENV !== "PRODUCTION") {
   require("dotenv").config({
