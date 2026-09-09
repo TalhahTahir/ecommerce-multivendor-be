@@ -7,6 +7,7 @@ const cors = require("cors");
 dns.setServers(['8.8.8.8', '1.1.1.1']);
 
 app.use(cors());
+app.options('*any', cors());
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {
   console.log(`Error: ${err.message}`);
