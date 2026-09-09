@@ -7,9 +7,13 @@ const path = require("path");
 const cors = require("cors");
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://ecommerce-multivendor-fe-vydh.vercel.app'],
+  origin: [
+    "https://ecommerce-multivendor-fe-vydh.vercel.app"
+  ],
+  methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
   credentials: true
 }));
+app.options("*", cors());
 
 app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());
