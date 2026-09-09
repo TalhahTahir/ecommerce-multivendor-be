@@ -2,12 +2,9 @@ const app = require("./app");
 const connectDatabase = require("./db/Database");
 const cloudinary = require("cloudinary");
 const dns = require('node:dns')
-const cors = require("cors");
 
 dns.setServers(['8.8.8.8', '1.1.1.1']);
 
-app.use(cors());
-app.options('*any', cors());
 // Handling uncaught Exception
 process.on("uncaughtException", (err) => {
   console.log(`Error: ${err.message}`);
