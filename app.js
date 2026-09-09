@@ -7,7 +7,7 @@ const path = require("path");
 const cors = require("cors");
 
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://eshop-tutorial-pyri.vercel.app'],
+  origin: ['http://localhost:3000', 'http://localhost:5173', 'http://localhost:5174', 'https://ecommerce-multivendor-fe-vydh.vercel.app/'],
   credentials: true
 }));
 
